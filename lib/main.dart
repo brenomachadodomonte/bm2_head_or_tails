@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math' as math;
 
 void main() => runApp(MaterialApp(
   home: Home(),
@@ -15,7 +16,11 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
 
+  double _ratio = 0.0;
   String _result = 'HEAD';
+  bool _isHead = true;
+  String _imagePath = 'assets/images/head.png';
+  int _counter = 4;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +40,11 @@ class _HomeState extends State<Home> {
               child: SizedBox(
                 width: width,
                 height: width,
-                child: Image(image: AssetImage('assets/images/head.png'),),
+                child: Transform(  // Transform widget
+                    transform: Matrix4.rotationY(_ratio),
+                    alignment: FractionalOffset.center,
+                    child: Image(image: AssetImage(_imagePath),)
+                ),
               ),
             ),
             SizedBox(height: 20,),
@@ -49,7 +58,13 @@ class _HomeState extends State<Home> {
                   icon: Icon(Icons.play_arrow, color: Colors.white),
                   onPressed: (){
                     setState(() {
-                      //TODO: Ramdon
+                      _ratio += math.pi / 8;
+                      _counter++;
+                      if(_counter == 8){
+                        _counter = 0;
+                        _imagePath = _isHead ? 'assets/images/tails.png' : 'assets/images/head.png';
+                        _isHead = !_isHead;
+                      }
                     });
                   },
                 ),
