@@ -18,7 +18,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
 
   AnimationController controller;
   double _ratio = 0.0;
-  String _result = 'HEAD';
+  String _result = '-';
   bool _isHead = true;
   String _imagePath = 'assets/images/head.png';
   int _counter = 4;
