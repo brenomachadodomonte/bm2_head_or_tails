@@ -1,16 +1,14 @@
-# headortails
-
+# Head or Tails
 Head or Tails app
 
-## Getting Started
+## Screenshot
+![Head or Tails Demo](demo/demo.gif)
 
-This project is a starting point for a Flutter application.
+## Dependencies
+No dependencies
 
-A few resources to get you started if this is your first Flutter project:
+## Dev dependencies
+- flutter_launcher_icons: Just for build launcher Icons
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## See more
+For more information about me or other projects: [brenomachado.dev](https://brenomachado.dev)
